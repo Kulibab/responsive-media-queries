@@ -1,0 +1,357 @@
+body {
+  font-family: roboto;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #0b192f;
+  color: #484848;
+}
+
+.post-1 {
+  background: #F3D250;
+}
+
+.post-2 {
+  background: #8D8741;
+}
+
+.post-3 {
+  background: #659DBD;
+}
+
+.post-4 {
+  background: #DAAD86;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: #162b4d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 100;
+  padding-left: 25px;
+}
+
+.red {
+  color: rgb(255, 2, 179);
+}
+
+.nav {
+  padding-right: 70px;
+  font-size: 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav a {
+  display: block;
+  padding: 38px 35px;
+  color: white;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.nav a:hover{
+  background: rgba(184, 184, 184, 0.3);
+}
+
+.main {
+  box-sizing: border-box;
+  max-width: 77%;
+  padding: 23px 23px 23px 0;
+  color: #484848;
+}
+
+.post {
+  display: flex;
+}
+
+.post img {
+  max-width: 50%;
+  object-fit: cover;
+}
+
+.post img:hover, .post-content:hover {
+  opacity: 0.5;
+}
+
+.post-content {
+  display: flex;
+  max-width: 50%;
+}
+
+.post-text {
+  box-sizing: border-box;
+  padding: 38px 38px 0 38px;
+  max-width: 84%;
+  font-weight: 300;
+}
+
+.post h2 {
+  font-weight: 100;
+  font-size: 37px;
+}
+
+.post-text p {
+  padding-top: 20px;
+  font-size: 15px;
+  line-height: 2.1em;
+}
+
+.post-text span {
+  color: #484848;
+}
+
+.post time {
+  display: block;
+  max-width: 16%;
+  padding: 22px 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.date {
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.post-5 {
+  max-width: 100%;
+  background: url('../img/post5.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 25px 0 25px 25px;
+}
+
+.post-5 h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-top: 218px;
+  letter-spacing: -2px;
+  word-spacing: 3px;
+}
+
+.post-5 p {
+  font-weight: 100;
+  line-height: 2em;
+  padding: 14px 0 100px;
+  font-size: 15px;
+}
+
+.aside {
+  box-sizing: border-box;
+  max-width: 23%;
+}
+
+.aside .news {
+  display: flex;
+  flex-direction: column;
+  margin-top: 23px;
+  background: white;
+}
+
+.aside img {
+  max-width: 100%;
+}
+
+.aside .aside-text {
+  padding: 32px 32px;
+  font-weight: 100;
+}
+
+.aside-text h2 {
+  font-weight: 100;
+  font-size: 30px;
+  padding-top: 8px;
+}
+
+.aside-text p {
+  padding: 30px 0 24px;
+  font-size: 15px;
+  line-height: 170%;
+}
+
+.news-btn {
+  border: 1px solid black;
+  color: black;
+  display: block;
+  padding: 8px 9px;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.news-btn:hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+}
+
+.footer {
+  width: 100%;
+  background: #162b4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 100;
+  font-size: 15px;
+  padding: 25px;
+  line-height: 25px;
+}
+
+
+@media only screen and (min-width: 1001px) {
+  .post:nth-child(even), .post:nth-child(even) .post-content {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    padding: 0 15px;
+  }
+
+  .header {
+    justify-content: center;
+    padding: 98px 0 8px;
+  }
+
+  .header:before {
+    content:'\2261';
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo {
+    padding: 0;
+    font-size: 38px;
+  }
+
+  .main {
+    max-width: 65%;
+  }
+
+  .aside {
+    max-width: 35%;
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  .post img, .post-content, .post-text, .post time{
+    max-width: 100%;
+  }
+
+  .post-content {
+    flex-direction: column;
+  }
+
+  .post-content h2 {
+    font-size: 42px;
+    padding-bottom: 8px;
+  }
+
+  .post-text {
+    padding: 35px 30px 0 35px;
+    line-height: 3.4em;
+  }
+
+  .post-text p {
+    line-height: 1.75em;
+    font-size: 14px;
+    padding-top: 0;
+  }
+
+  .post-content span {
+    font-size: 35px;
+  }
+
+  .post-content time {
+    padding: 2px 0 35px;
+    font-size: 24px;
+  }
+
+  .post-5 h2{
+    padding-top: 95px;
+    font-size: 45px;
+  }
+
+  .post-5 p {
+    line-height: 1.6em;
+    padding: 5px 0 125px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 65px;
+    font-weight: 400;
+  }
+
+  .footer .about {
+    padding-top: 12px;
+  }
+
+  .aside-text h2 {
+    padding-top: 2px;
+  }
+
+  .news p {
+    line-height: 1.45em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+body {
+  padding: 0 5px;
+}
+
+  .main {
+    max-width: 100%;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .aside {
+    max-width: 100%;
+  }
+
+  .news h2 {
+    font-size: 29px;
+  }
+
+  .news p {
+    line-height: 1.7em;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
